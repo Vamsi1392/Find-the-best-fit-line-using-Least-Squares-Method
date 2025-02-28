@@ -24,6 +24,7 @@ Developed by:
 RegisterNumber:  
 */
 ```
+```
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -50,6 +51,7 @@ print(y_predicated)
 plt.scatter(X,Y)
 plt.plot(X,y_predicated,color='red')
 plt.show()
+```
 
 ## Output:
 
