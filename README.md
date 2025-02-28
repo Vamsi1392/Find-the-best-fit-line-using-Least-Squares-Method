@@ -24,9 +24,37 @@ Developed by:
 RegisterNumber:  
 */
 ```
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.array(eval(input()))
+Y = np.array(eval(input()))
+
+X_mean =np.mean(X)
+Y_mean =np.mean(Y)
+num=0 
+denom=0 
+
+for i in range (len(X)):
+    num+=(X[i] -X_mean)*(Y[i]-Y_mean)
+    denom+=(X[i]-X_mean)**2
+
+m=num/denom
+
+b=Y_mean-m*X_mean
+print(m,b)
+
+y_predicated=m*X+b
+print(y_predicated)
+
+plt.scatter(X,Y)
+plt.plot(X,y_predicated,color='red')
+plt.show()
 
 ## Output:
-![best fit line](sam.png)
+
+![image](https://github.com/user-attachments/assets/24ebd126-a4cd-4f85-808b-31c4d717b332)
+
 
 
 ## Result:
